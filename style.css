@@ -25,6 +25,12 @@
     transition-duration: 0.25s;
 }
 
+.nav-item a{
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+
 .nav-item:hover{
     box-shadow: 2px 2px 20px aquamarine, -2px -2px 20px aquamarine;
     padding: 6px 13px;
