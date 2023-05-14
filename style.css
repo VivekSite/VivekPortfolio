@@ -6,10 +6,32 @@
     font-family: monospace;
 }
 
-.hg{
-    color: aqua;
-    text-align: center;
-    font-size: 50px;
-
+#nav_bar{
+    list-style: none;
 }
 
+.nav-item {
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    font-family: monospace;
+    background-color: aquamarine;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    float: left;
+    transition-timing-function: linear;
+    transition-duration: 0.25s;
+}
+
+.nav-item:hover{
+    box-shadow: 2px 2px 20px aquamarine, -2px -2px 20px aquamarine;
+    padding: 6px 13px;
+    cursor: pointer;
+}
+
+.nav-bar{
+    margin: 10px 50px;
+    height: 46px;
+}
