@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.hg{
+    color: aqua;
+    text-align: center;
+    font-size: 50px;
+
+}
+
