@@ -17,6 +17,47 @@ body{
     height: 100vh;
 }
 
+#nav_bar{
+    list-style: none;
+    float: right;
+    margin-left: auto;
+}
+
+.nav-item {
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    background-color: rgba(127, 255, 212, 0.9);
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    float: left;
+    transition-timing-function: linear;
+    transition-duration: 0.20s;
+}
+
+.nav-item:hover{
+    box-shadow: 2px 2px 20px aquamarine, -2px -2px 20px aquamarine;
+    padding: 6px 13px;
+    cursor: pointer;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px;
+}
+
+.nav-bar span{
+    color: aquamarine;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.nav-bar span:hover{
+    cursor: default;
+}
 
 @media screen and (max-width: 1000px) {
     body{
