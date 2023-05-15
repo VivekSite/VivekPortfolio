@@ -4,12 +4,14 @@
     box-sizing: border-box;
     font-size: 20px;
     font-family: 'monospace', Courier, sans-serif;
+    overflow-x: hidden;
 }
 
 body{
     background-image: url("bg-1.jpg");
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .header{
@@ -51,7 +53,9 @@ body{
 }
 
 .nav-item:hover{
-    box-shadow: 2px 2px 20px aquamarine, -2px -2px 20px aquamarine;
+    box-shadow: 1px 1px 10px aquamarine, -1px -1px 10px aquamarine;
+    /* color: rgba(127, 255, 212); */
+    /* background-color: rgba(56, 56, 56); */
     padding: 6px 13px;
     cursor: pointer;
 }
@@ -62,6 +66,7 @@ body{
     flex-direction: row;
     margin-left: auto;
     padding: 10px 50px;
+    transition: all 0.25s linear;
 }
 
 
@@ -73,7 +78,7 @@ body{
 
 .header .logo{
     color: aquamarine;
-    font-size: 25px;
+    font-size: 1.5rem;
     margin: 10px;
     padding: 15px 10px;
 }
@@ -109,6 +114,21 @@ body{
 
 
 
+.active .nav-bar{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+.active .mobile-menu .mm[name="close-outline"]{
+    display: block;
+}
+
+.active .mobile-menu .mm[name="menu-outline"]{
+    display: none;
+}
     /*=======================================================
         
        media query starts
@@ -126,7 +146,7 @@ body{
 
 /*  for menu bar hide and display function */
 
-@media (min-width:500px) and (max-width: 900px) {
+@media (min-width:700px) and (max-width: 900px) {
 
     .header{
         padding: 5px 20px;
@@ -147,19 +167,25 @@ body{
     }
 
     .nav-bar{
-        display: none; /*if you use diplay then we can not use animation */
+        /* display: none; if you use diplay then we can not use animation */
 
-        /* width: 100%;
+        width: 30%;
         height: 100vh;
-        background-color: rgb(56, 56, 56);
+        background-color: rgba(56, 56, 56, 0.7);
         position: absolute;
         top: 0;
-        left: 0; */
+        right: 0;
+        padding-top: 3rem;
+        justify-content: center;
+        transform: translateX(100%);
 
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     } 
 }
 
-@media (max-width:500px){
+@media (max-width:700px){
 
     .header{
         padding: 5px 20px;
