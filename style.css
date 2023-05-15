@@ -34,7 +34,6 @@ body{
 #nav_bar{
     list-style: none;
     float: right;
-    /* margin-left: auto; */
 }
 
 .nav-item {
@@ -61,6 +60,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: row;
+    margin-left: auto;
     padding: 10px 50px;
 }
 
