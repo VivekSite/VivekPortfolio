@@ -12,15 +12,29 @@ body{
     background-repeat: no-repeat;
 }
 
+.header{
+    display: flex;
+}
+
 .bg-image{
     width: 100vw;
     height: 100vh;
 }
 
+    /*=======================================================
+        
+       navigation starts
+
+    =======================================================*/
+
+
+
+
+
 #nav_bar{
     list-style: none;
     float: right;
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 .nav-item {
@@ -44,23 +58,151 @@ body{
 }
 
 .nav-bar{
+    position: relative;
     display: flex;
     flex-direction: row;
     padding: 10px 50px;
 }
 
-.nav-bar span{
+
+    /*=======================================================
+        
+        css for logo
+
+    =======================================================*/
+
+.header .logo{
     color: aquamarine;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 25px;
+    margin: 10px;
+    padding: 15px 10px;
 }
 
-.nav-bar span:hover{
+.header .logo:hover{
     cursor: default;
 }
+
+
+
+    /*=======================================================
+        
+        Mobile menu 
+
+    =======================================================*/
+
+.mobile-menu{
+    width: auto;
+    margin: 5px 10px;
+    display: none;   
+    cursor: pointer;
+}
+
+.mobile-menu .mm{
+    height: 40px;
+    width: 40px;
+    color: aquamarine;
+}
+
+.mm[name="close-outline"]{
+    display: none;
+}
+
+
+
+    /*=======================================================
+        
+       media query starts
+
+    =======================================================*/
+
+
+
 
 @media screen and (max-width: 1000px) {
     body{
         background-size: auto 100vh;
     }
+}
+
+/*  for menu bar hide and display function */
+
+@media (min-width:500px) and (max-width: 900px) {
+
+    .header{
+        padding: 5px 20px;
+    }
+
+    .header .logo{
+        color: aquamarine;
+        font-size: 20px;
+        padding: 7px;
+    }
+
+    .mobile-menu{
+        display: block;
+        margin-left: auto;
+        margin-right: 5px;
+        margin-top: 1px;
+        z-index: 999;
+    }
+
+    .nav-bar{
+        display: none; /*if you use diplay then we can not use animation */
+
+        /* width: 100%;
+        height: 100vh;
+        background-color: rgb(56, 56, 56);
+        position: absolute;
+        top: 0;
+        left: 0; */
+
+    } 
+}
+
+@media (max-width:500px){
+
+    .header{
+        padding: 5px 20px;
+    }
+
+    .header .logo{
+        color: aquamarine;
+        font-size: 20px;
+        padding: 1px;
+    }
+
+    .mobile-menu{
+        display: block;
+        margin-left: auto;
+        margin-right: 5px;
+        margin-top: 2px;
+        z-index: 999;
+    }
+
+    .nav-bar{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(56, 56, 56, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        padding-top: 40px;
+        transform: translatex(100%);
+        overflow-x: hidden;
+        transition: all 0.25s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    } 
+
+    #nav_bar{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
