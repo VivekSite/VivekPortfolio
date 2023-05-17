@@ -1,0 +1,6 @@
+#Contact-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(224, 224, 224);
+    transition: all .20s linear;
+}
