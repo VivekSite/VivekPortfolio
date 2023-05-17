@@ -41,6 +41,20 @@ body{
     font-size: 0.90rem;
 }
 
+.home-head h2::selection{
+    background-color: transparent;
+    color: rgba(105, 105, 105, 0.9);
+}
+
+.home-head p::selection{
+    background-color: transparent;
+    color: rgba(127, 255, 212, 0.9);
+}
+
+.home-head:hover{
+    cursor: default;
+}
+
     /*=======================================================
         
        navigation starts
