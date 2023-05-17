@@ -9,9 +9,6 @@
 }
 
 body{
-    background-image: url("Home.png");
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
     overflow-x: hidden;
 }
 
@@ -19,9 +16,13 @@ body{
     position: fixed;
     display: flex;
     width: 100vw;
+    overflow: visible;
 }
 
 .bg-image{
+    background-image: url("Home.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
 }
@@ -37,6 +38,11 @@ body{
     top: 40%;
     left: 5%;
     width: 25rem;
+}
+
+.home-head a{
+    position: relative;
+    left: -0.25rem;
 }
 
 .home-head h2{
@@ -164,12 +170,20 @@ body{
 }
 
 
+   /*=======================================================
+        
+                Activating mobile menu
+
+    =======================================================*/
+
 
 .active .nav-bar{
+    z-index: 998;
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    margin-right: 0;
 }
 
 
@@ -190,7 +204,7 @@ body{
 
 
 @media screen and (max-width: 1000px) {
-    body{
+    .bg-image{
         background-size: auto 100vh;
     }
 }
@@ -232,14 +246,17 @@ body{
     .nav-bar{
         /* display: none; if you use diplay then we can not use animation */
 
+        display: flex;
+        flex-direction: column;
+
         width: 30%;
         height: 100vh;
-        background-color: rgba(56, 56, 56, 0.7);
+        background-color: rgba(56, 56, 56);
         position: absolute;
         top: 0;
         right: 0;
         padding-top: 3rem;
-        justify-content: center;
+        /* justify-content: center; */
         transform: translateX(100%);
 
         opacity: 0;
@@ -251,7 +268,12 @@ body{
 @media (max-width:700px){
 
     .home-head{
+        display: flex;
+        flex-direction: column;
         width: 15rem;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .home-head h2{
@@ -283,7 +305,7 @@ body{
     .nav-bar{
         width: 100%;
         height: 100vh;
-        background-color: rgba(56, 56, 56, 0.8);
+        background-color: rgba(56, 56, 56);
         position: absolute;
         top: 0;
         left: 0;
