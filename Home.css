@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'monospace', Courier, sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: url("Home.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+}
+
+.bg-image{
+    width: 100vw;
+    height: 100vh;
+}
+
+    /*=======================================================
+        
+                 Home page heading
+
+    =======================================================*/
+
+.home-head{
+    position: relative;
+    top: 40%;
+    left: 5%;
+    width: 25rem;
+}
+
+.home-head h2{
+    color: rgba(127, 255, 212, 0.9);
+    font-size: 3rem;
+}
+
+.home-head p{
+    color: rgba(105, 105, 105, 0.9);
+    font-size: 0.90rem;
+}
+
+.home-head h2::selection{
+    background-color: transparent;
+    color: rgba(105, 105, 105, 0.9);
+}
+
+.home-head p::selection{
+    background-color: transparent;
+    color: rgba(127, 255, 212, 0.9);
+}
+
+.home-head:hover{
+    cursor: default;
+}
+
+    /*=======================================================
+        
+       navigation starts
+
+    =======================================================*/
+
+
+
+
+.nav-bar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 5%;
+    padding: 10px 10px;
+    transition: all 0.25s linear;
+}
+
+#nav_bar{
+    list-style: none;
+    /* float: right; */
+}
+
+#nav_bar li{
+    float: left;
+}
+
+.nav-item {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    background-color: rgba(127, 255, 212, 0.9);
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    float: left;
+    transition: all 0.20s linear;
+}
+
+.nav-item:hover{
+    box-shadow: 1px 1px 10px aquamarine, -1px -1px 10px aquamarine;
+    /* color: rgba(127, 255, 212); */
+    /* background-color: rgba(56, 56, 56); */
+    padding: 6px 13px;
+    cursor: pointer;
+}
+
+
+    /*=======================================================
+        
+        css for logo
+
+    =======================================================*/
+
+.header .logo{
+    color: aquamarine;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+    padding: 15px 0px;
+    margin-left: 5%;
+
+}
+
+.header .logo:hover{
+    cursor: default;
+}
+
+.logo::selection{
+    background-color: transparent;
+    color: rgba(105, 105, 105, 0.9);
+}
+
+
+
+    /*=======================================================
+        
+        Mobile menu 
+
+    =======================================================*/
+
+.mobile-menu{
+    width: auto;
+    margin: 5px 10px;
+    display: none;   
+    cursor: pointer;
+}
+
+.mobile-menu .mm{
+    height: 40px;
+    width: 40px;
+    color: aquamarine;
+}
+
+.mm[name="close-outline"]{
+    display: none;
+}
+
+
+
+.active .nav-bar{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+.active .mobile-menu .mm[name="close-outline"]{
+    display: block;
+}
+
+.active .mobile-menu .mm[name="menu-outline"]{
+    display: none;
+}
+    /*=======================================================
+        
+       media query starts
+
+    =======================================================*/
+
+
+
+
+@media screen and (max-width: 1000px) {
+    body{
+        background-size: auto 100vh;
+    }
+}
+
+/*  for menu bar hide and display function */
+
+@media (min-width:700px) and (max-width: 900px) {
+
+    .home-head{
+        width: 15rem;
+    }
+
+    .home-head h2{
+        font-size: 2rem;
+    }
+    
+    .home-head p{
+        font-size: 0.75rem;
+    }
+
+    .header{
+        padding: 5px 20px;
+    }
+
+    .header .logo{
+        color: aquamarine;
+        font-size: 20px;
+        padding: 7px;
+    }
+
+    .mobile-menu{
+        display: block;
+        margin-left: auto;
+        margin-right: 5px;
+        margin-top: 1px;
+        z-index: 999;
+    }
+
+    .nav-bar{
+        /* display: none; if you use diplay then we can not use animation */
+
+        width: 30%;
+        height: 100vh;
+        background-color: rgba(56, 56, 56, 0.7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 3rem;
+        justify-content: center;
+        transform: translateX(100%);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    } 
+}
+
+@media (max-width:700px){
+
+    .home-head{
+        width: 15rem;
+    }
+
+    .home-head h2{
+        font-size: 2rem;
+    }
+    
+    .home-head p{
+        font-size: 0.75rem;
+    }
+
+    .header{
+        padding: 5px 20px;
+    }
+
+    .header .logo{
+        color: aquamarine;
+        font-size: 20px;
+        padding: 1px;
+    }
+
+    .mobile-menu{
+        display: block;
+        margin-left: auto;
+        margin-right: 5px;
+        margin-top: 2px;
+        z-index: 999;
+    }
+
+    .nav-bar{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(56, 56, 56, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        padding-top: 40px;
+        transform: translatex(100%);
+        overflow-x: hidden;
+        transition: all 0.25s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    } 
+
+    #nav_bar{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
